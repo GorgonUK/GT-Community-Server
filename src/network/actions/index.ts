@@ -11,9 +11,10 @@ import { RespawnSpike } from "./RespawnSpike";
 import { Drop } from "./Drop";
 import { Trash } from "./Trash";
 import { Wrench } from "./Wrench";
-import { StoreBuy } from "./StoreBuy";
-import { StoreHandler } from "./StoreHandler";
+import { ShopBuy } from "./ShopBuy";
+import { ShopHandler } from "./ShopHandler";
 import { Info } from "./Info";
+import { KillShop } from "./KillShop";
 
 export const ActionMap: Record<
   string,
@@ -33,7 +34,10 @@ export const ActionMap: Record<
   ["drop"]:              Drop,
   ["trash"]:             Trash,
   ["wrench"]:            Wrench,
-  ["buy"]:               StoreBuy,
-  ["store"]:             StoreHandler,
+  ["buy"]:               ShopBuy,
+  ["store"]:             ShopHandler, // Shop icon on the right side of the UI
+  ["storenavigate"]:     ShopHandler, // The gem icon in the top left corner of the UI
+  ["store_navigate"]:    ShopHandler, // The plus icon in the top left corner of the UI (this should take you to the gems section)
+  ["killstore"]:         KillShop,
   ["info"]:              Info
 };
